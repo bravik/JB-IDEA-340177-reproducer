@@ -1,0 +1,16 @@
+version: '3.8'
+name: reproducer
+
+services:
+  notifications:
+    build:
+      context: ../notifications
+      dockerfile: ../docker/Dockerfile
+    networks: [net]
+    expose:
+      - "80"
+# sha256:7b82a629efc9502259d24dc66f85c405fd187f8018cdde2e0b5777655a48afe4
+# sha256:7b82a629efc9502259d24dc66f85c405fd187f8018cdde2e0b5777655a48afe4
+  sha256:64e2c9c689602dfd495fd248b6f9e0ac76888b8d53b050ccaef8b72afd7c75e9
+networks:
+  net:
